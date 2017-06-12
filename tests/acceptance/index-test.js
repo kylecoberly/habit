@@ -14,5 +14,11 @@ test("visiting /index", function(assert){
 		assert.equal(index.habits().count, 10);
 		assert.equal(index.habits(0).habit, "Wear night guard");
 		assert.equal(index.habits(1).habit, "Meditate 5 minutes");
+
+		assert.equal(index.habits(1).isChecked, false);
+		index.habits(1).check();
+	});
+	andThen(function(){
+		assert.equal(index.habits(1).isChecked, true);
 	});
 });

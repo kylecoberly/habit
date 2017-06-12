@@ -1,5 +1,8 @@
 <ul class="habits" data-test-habits>
 	{{#each model as |habit|}}
-		<li class="habit" data-test-habit>{{habit.label}}</li>
+		<li class="habit" data-test-habit>
+			<input id="habit-{{habit.id}}" type="checkbox" />
+			<label for="habit-{{habit.id}}">{{habit.label}}</label>
+		</li>
 	{{/each}}
 </ul>

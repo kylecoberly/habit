@@ -2,7 +2,9 @@ import {
 	create,
 	visitable,
 	text,
-	collection
+	collection,
+	clickable,
+	property
 } from "ember-cli-page-object";
 import testSelector from "ember-test-selectors";
 
@@ -13,7 +15,9 @@ export default create({
 		scope: testSelector("habits"),
 		itemScope: testSelector("habit"),
 		item: {
-			habit: text()
+			habit: text(),
+			check: clickable("input"),
+			isChecked: property("checked", "input")
 		}
 	})
 });
