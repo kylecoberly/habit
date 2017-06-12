@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700");
+
+@mixin general-type {
+	font-family: Roboto, sans-serif;
+}
+
+@mixin header-type {
+	@include general-type;
+	font-size: 2rem;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+@mixin habit-type {
+	@include general-type;
+	font-size: 2rem;
+	font-weight: 300;
+}

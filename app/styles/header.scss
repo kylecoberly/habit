@@ -1,0 +1,6 @@
+header {
+	padding: 1rem;
+	background: $header-gradient;
+	@include header-type;
+	color: $white;
+}

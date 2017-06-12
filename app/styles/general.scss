@@ -1,0 +1,15 @@
+main {
+	padding: 1rem;
+}
+
+.habits {
+	.habit {
+		padding: 1rem;
+		text-align: right;
+		background-color: $light-grey;
+		@include habit-type;
+		&:not(:last-child){
+			margin-bottom: 0.3rem;
+		}
+	}
+}
